@@ -1,0 +1,17 @@
+.review{
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: 20px 0;
+}
+
+.review__head{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.review__pictures{
+	display: flex;
+	gap: 16px;
+}

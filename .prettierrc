@@ -1,0 +1,40 @@
+{
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
+	"semi": false,
+	"trailingComma": "es5",
+	"endOfLine": "lf",
+	"bracketSameLine": true,
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": ["*.js", "*.jsx", "*.ts", "*.tsx", "*.scss"],
+			"options": {
+				"tabWidth": 4,
+				"singleQuote": true,
+				"jsxSingleQuote": true,
+				"endOfLine": "lf"
+			}
+		},
+		{
+			"files": ["*.html"],
+			"options": {
+				"singleQuote": false
+			}
+		}
+	],
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@mui/(.*)$",
+		"^src/utils(.*)$",
+		"^src/model(.*)$",
+		"^src/helpers(.*)$",
+		"^src/store(.*)$",
+		"^src/layout(.*)$",
+		"^src/pages(.*)$",
+		"^src/(.*)$",
+		"classnames",
+		"(?=./module.css)",
+		"^[./]"
+	],
+	"importOrderSortSpecifiers": true
+}

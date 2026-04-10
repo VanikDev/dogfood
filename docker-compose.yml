@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: homework
+    image: vanikego/homework-docker:latest # Замените на ваш Docker Hub username
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PUBLIC_URL=${PUBLIC_URL:-https://github.com/VanikDev/dogfood}
+        - PUBLIC_PATH=${PUBLIC_PATH:-/dogfood}
+    ports:
+      - "3000:80" # Nginx обычно на 80 порту внутри контейнера
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - homework-network
+
+networks:
+  homework-network:
+    driver: bridge

@@ -1,0 +1,11 @@
+.cart{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 24px;
+	margin-bottom: 40px;
+}
+
+.cart__actions{
+	margin-top: 20px
+}

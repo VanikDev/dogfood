@@ -1,0 +1,13 @@
+.catalog__list_container{
+	display: grid;
+	grid-template-columns: repeat(4,minmax(100px,1fr));
+	grid-gap: 40px 20px;
+}
+
+@media (width <= 900px) {
+	.catalog__list_container { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (width <= 600px) {
+	.catalog__list_container { grid-template-columns: repeat(2, 1fr); }
+}

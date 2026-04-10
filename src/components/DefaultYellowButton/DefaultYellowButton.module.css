@@ -1,0 +1,9 @@
+button.default__yellow_button{
+	width: 218px;
+	padding: 14px 24px;
+	color: var(--text-default-color);
+	font-weight: var(--weight-700);
+	font-size: 16px;
+	background: var(--bg-default-yellow);
+	border-radius: 55px;
+}

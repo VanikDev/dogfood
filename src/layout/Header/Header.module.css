@@ -1,0 +1,23 @@
+.header{
+	height: 80px;
+	background-color: var(--bg-default-yellow);
+}
+
+header svg{
+	color: var(--text-default-color)
+}
+
+.header__wrapper{
+	justify-content: space-between;
+	align-items: center;
+	gap: 80px;
+	padding-top: 8px;
+	padding-bottom: 12px;
+}
+
+.header__icons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 34px;
+}

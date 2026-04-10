@@ -1,0 +1,24 @@
+.product__prices{
+	height: 52px;
+}
+
+.product__prices_discount{
+	height: 20px;
+	font-weight: var(--weight-400);
+	font-size: 14px;
+	font-style: normal;
+	line-height: 20px;
+	text-decoration-line: line-through;
+}
+
+.product__prices_price{
+	height: 32px;
+	font-weight: var(--weight-800);
+	font-size: 28px;
+	font-style: normal;
+	line-height: 32px;
+}
+
+.product__prices_price_red{
+	color: var(--text-red-color);
+}

@@ -1,0 +1,17 @@
+button.default__button{
+	width: 172px;
+	padding: 10px 18px;
+	color: inherit;
+	font-weight: var(--weight-700);
+	border: var(--btn-border-default);
+	border-radius: 87px;
+}
+
+button.default__button_large{
+	width: 100%;
+	padding: 10px 18px;
+	color: inherit;
+	font-weight: var(--weight-700);
+	border: var(--btn-border-default);
+	border-radius: 87px;
+}

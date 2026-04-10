@@ -1,0 +1,8 @@
+.warranty__info{
+	display: flex;
+	gap: 12px;
+	height: 144px;
+	padding: 12px;
+	background: #ECEFF180;
+	border-radius: 12px;
+}

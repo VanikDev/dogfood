@@ -1,0 +1,11 @@
+.search__result_message{
+	height: 32px;
+	font-weight: var(--weight-300);
+	font-size: 28px;
+	font-style: normal;
+	line-height: 32px;
+}
+
+.search__result_message span{
+	font-weight: var(--weight-800);
+}

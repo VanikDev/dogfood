@@ -1,0 +1,42 @@
+.total__amount{
+	width: 312px;
+	height: 257px;
+	margin-bottom: 40px;
+	padding: 16px;
+	border-radius: 20px;
+	box-shadow: 0 2px 16px 0 rgb(96 97 112 / 16%), 0 0 1px 0 rgb(40 41 61 / 2%);
+}
+
+.total__amount button{
+	width: 312px;
+}
+
+.total__amount_field{
+	display: flex;
+	justify-content: space-between;
+	height: 20px;
+	margin-bottom: 16px;
+}
+
+.total__amount_field_text{
+	color: var(--text-gray-color)
+}
+
+.total__amount_field-text{
+	color: var(--text-gray-color)
+}
+
+.total__amount_discount{
+	color: var(--text-red-color)
+}
+
+.total__amount_price{
+	margin-top: 24px;
+}
+
+.total__amount_price_all{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+	margin-bottom: 24px;
+}

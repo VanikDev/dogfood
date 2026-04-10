@@ -1,0 +1,9 @@
+.ordered__with{
+
+}
+
+.ordered__with_head{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}

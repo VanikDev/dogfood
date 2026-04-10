@@ -1,0 +1,30 @@
+.product__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product__media{
+    display: flex;
+}
+
+.product__search_icon{
+    align-self: flex-end;
+}
+
+.product__actions{
+    gap: 20px;
+    width: 343px
+}
+
+.product__actions_buttons{
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+}
+
+.product__favorites{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

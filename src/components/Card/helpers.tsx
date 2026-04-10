@@ -1,0 +1,3 @@
+export const CARD_SETTINGS_TEST_ID = {
+	BUTTON: 'ADD_TO_CART_BUTTON',
+}

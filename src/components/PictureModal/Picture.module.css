@@ -1,0 +1,27 @@
+.picture__modal{
+	display: flex;
+	justify-content: space-between;
+}
+
+.picture__modal_content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.picture__modal_header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.picture__close_icon{
+	align-self: flex-end;
+	height: 40px;
+}
+
+.picture__arrow_icon{
+	align-self: center;
+	height: 40px;
+}

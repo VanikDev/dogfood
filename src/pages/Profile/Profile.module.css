@@ -1,0 +1,20 @@
+.profile{
+	position: relative;
+}
+
+.profile__info{
+	margin: 20px 0;
+}
+
+.profile__contacts{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #7B8E98;
+}
+
+.profile__buttons{
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}

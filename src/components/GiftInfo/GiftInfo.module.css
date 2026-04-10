@@ -1,0 +1,11 @@
+.gift__info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	width: 122px;
+	height: 42px;
+	padding: 12px;
+	background: #ECEFF180;
+	border-radius: 12px;
+}

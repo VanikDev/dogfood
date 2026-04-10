@@ -1,0 +1,15 @@
+.review{
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin: 40px 0;
+}
+
+.review__fields{
+	display: inline-flex;
+	gap: 40px;
+}
+
+.review__field{
+	width: 160px;
+}

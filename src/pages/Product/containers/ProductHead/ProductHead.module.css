@@ -1,0 +1,15 @@
+.product__head{
+    display: flex;
+    gap: 16px;
+    padding-top: 4px;
+    padding-bottom: 20px;
+}
+
+.product__article{
+    display: flex;
+    gap: 4px;
+}
+
+.product__rating{
+    color: #FFAA0D;
+}

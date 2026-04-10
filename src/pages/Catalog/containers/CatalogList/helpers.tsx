@@ -1,0 +1,3 @@
+export const CATALOG_LIST_SETTINGS_TEST_ID = {
+	LIST: 'CATALOG_LIST',
+}
