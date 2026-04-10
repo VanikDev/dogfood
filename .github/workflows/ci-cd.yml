@@ -120,16 +120,14 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
-      - name: Run E2E tests with Cypress
+      - name: Run E2E tests
         uses: cypress-io/github-action@v6
         with:
-          install: true # Автоматически устанавливает Cypress binary
+          install: true
           start: yarn start
-          wait-on: "http://localhost:3734" # Используем ваш порт 3734
+          wait-on: "http://localhost:3734"
           wait-on-timeout: 120
-          command: yarn cy:run
           browser: chrome
-          config-file: ./cypress/cypress.config.ts
         env:
           CI: true
 
