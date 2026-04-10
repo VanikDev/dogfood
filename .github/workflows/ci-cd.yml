@@ -7,7 +7,7 @@ on:
     branches: [main, master]
 
 env:
-  PUBLIC_URL: https://github.com/VanikDev/dogfood
+  PUBLIC_URL: https://vanikdev.github.io/dogfood
   PUBLIC_PATH: /dogfood
 
 jobs:
