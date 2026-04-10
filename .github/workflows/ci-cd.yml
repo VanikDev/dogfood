@@ -95,13 +95,6 @@ jobs:
           name: test-results
           path: junit.xml
 
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: junit.xml
-          check_name: Unit Test Results
-
   e2e-tests:
     name: E2E Tests
     runs-on: ubuntu-latest
@@ -120,24 +113,10 @@ jobs:
           name: dist
           path: dist
 
-      - name: Debug - list files
-        run: |
-          ls -la dist/
-          cat dist/index.html | head -20
-
-      - name: Cache Cypress binary
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-cache-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-
-      - name: Install Cypress binary
-        run: npx cypress install
-
-      - name: Run E2E tests with serve
+      - name: Run E2E tests
         uses: cypress-io/github-action@v6
         with:
-          install: false
+          install: true
           start: npx serve -s dist -l 8080
           wait-on: "http://localhost:8080"
           wait-on-timeout: 60
