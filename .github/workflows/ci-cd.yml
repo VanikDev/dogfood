@@ -120,10 +120,23 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
+      - name: Cache Cypress binary
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-cache-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            cypress-cache-${{ runner.os }}-
+
+      - name: Install Cypress binary
+        run: |
+          npx cypress install
+          npx cypress verify
+
       - name: Run E2E tests
         uses: cypress-io/github-action@v6
         with:
-          install: true
+          install: false
           start: yarn start
           wait-on: "http://localhost:3734"
           wait-on-timeout: 120
