@@ -138,7 +138,7 @@ jobs:
         with:
           install: false
           start: yarn start
-          wait-on: "http://localhost:3734"
+          wait-on: "http://localhost:8080"
           wait-on-timeout: 120
           browser: chrome
         env:
