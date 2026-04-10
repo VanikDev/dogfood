@@ -7,7 +7,7 @@ export default defineConfig({
 		video: false,
 		screenshotOnRunFailure: false,
 		supportFile: false,
-		baseUrl: process.env.APP_URL,
+		baseUrl: process.env.APP_URL || 'http://localhost:8080',
 		viewportWidth: 1280,
 		viewportHeight: 800,
 	},

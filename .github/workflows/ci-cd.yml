@@ -124,6 +124,7 @@ jobs:
           config-file: cypress/cypress.config.ts
         env:
           CI: true
+          APP_URL: http://localhost:8080
 
       - name: Upload Cypress screenshots
         uses: actions/upload-artifact@v4
