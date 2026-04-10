@@ -26,13 +26,15 @@ export const DefaultFormWrapper: WithChildren<DefaultFormWrapperProps> = ({
 }) => (
 	<Box className={cn(s.auth__form)}>
 		<Box className={cn(s.auth__form_close)}>
-			<Link to={pathname}>
-				<Tooltip title={'Назад'}>
-					<IconButton>
-						<NavigateBeforeIcon />
-					</IconButton>
-				</Tooltip>
-			</Link>
+			{name !== 'Войти' && (
+				<Link to={pathname}>
+					<Tooltip title={'Назад'}>
+						<IconButton>
+							<NavigateBeforeIcon />
+						</IconButton>
+					</Tooltip>
+				</Link>
+			)}
 		</Box>
 		<Box
 			component='form'
