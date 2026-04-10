@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
 
 env:
   PUBLIC_URL: https://github.com/VanikDev/dogfood
@@ -19,19 +19,19 @@ jobs:
       cache-hit: ${{ steps.cache.outputs.cache-hit }}
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'yarn'
-      
+          node-version: "20"
+          cache: "yarn"
+
       - name: Cache node_modules
         id: cache
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-      
+
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
@@ -43,23 +43,23 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
+          node-version: "20"
+
       - name: Restore node_modules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-      
+
       - name: Build
         run: yarn build
         env:
           PUBLIC_URL: ${{ env.PUBLIC_URL }}
           PUBLIC_PATH: ${{ env.PUBLIC_PATH }}
-      
+
       - name: Upload dist
         uses: actions/upload-artifact@v4
         with:
@@ -74,27 +74,27 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
+          node-version: "20"
+
       - name: Restore node_modules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-      
+
       - name: Run unit tests
         run: yarn test:ci
-      
+
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results
           path: junit.xml
-      
+
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
@@ -109,23 +109,23 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
+          node-version: "20"
+
       - name: Restore node_modules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-      
+
       - name: Make run-e2e.sh executable
-        run: chmod +x ./run-e2e.sh
-      
+        run: chmod +x ./scripts/run-e2e.sh
+
       - name: Run E2E tests with script
-        run: ./run-e2e.sh
-      
+        run: ./scripts/run-e2e.sh
+
       - name: Upload Cypress artifacts
         uses: actions/upload-artifact@v4
         if: always()
@@ -155,15 +155,15 @@ jobs:
         with:
           name: dist
           path: dist
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload to Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-      
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

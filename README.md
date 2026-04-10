@@ -1,39 +1,37 @@
-Отличный проект! Я помогу вам создать README.md для GitHub и переделать CI/CD с GitLab на GitHub Actions.
-
-## README.md
-
-```markdown
 # React E-Commerce Project
 
 Интернет-магазин с полным циклом разработки: от компонентов до деплоя и E2E тестирования.
 
 ## 📋 О проекте
 
-Учебный проект, разработанный в рамках курса по React. Представляет собой полноценное SPA приложение интернет-магазина с корзиной, авторизацией, избранным и другими функциями.
+Проект представляет собой полноценное SPA приложение интернет-магазина с корзиной, авторизацией, избранным и другими функциями.
 
 ### 🚀 Демо
 
-- **GitLab Pages**: https://va-nik.gitlab.io/homework
-- **Docker Hub**: https://hub.docker.com/r/vanikego/homework-docker
+-   **GitLab Pages**: https://github.com/VanikDev/dogfood
+-   **Docker Hub**: https://hub.docker.com/r/vanikego/homework-docker
 
 ## 🛠 Технологии
 
 ### Frontend
-- **React 18** - библиотека для построения UI
-- **TypeScript** - типизация приложения
-- **Redux Toolkit + RTK Query** - управление состоянием и работа с API
-- **React Router v6** - маршрутизация
-- **React Hook Form + Yup** - работа с формами и валидация
+
+-   **React 18** - библиотека для построения UI
+-   **TypeScript** - типизация приложения
+-   **Redux Toolkit + RTK Query** - управление состоянием и работа с API
+-   **React Router v6** - маршрутизация
+-   **React Hook Form + Yup** - работа с формами и валидация
 
 ### Тестирование
-- **Jest + React Testing Library** - unit и интеграционные тесты
-- **Cypress** - E2E тестирование
+
+-   **Jest + React Testing Library** - unit и интеграционные тесты
+-   **Cypress** - E2E тестирование
 
 ### DevOps
-- **Docker** - контейнеризация приложения
-- **Docker Compose** - оркестрация контейнеров
-- **GitLab CI/CD** - непрерывная интеграция и доставка
-- **Nginx** - веб-сервер для раздачи статики
+
+-   **Docker** - контейнеризация приложения
+-   **Docker Compose** - оркестрация контейнеров
+-   **GitLab CI/CD** - непрерывная интеграция и доставка
+-   **Nginx** - веб-сервер для раздачи статики
 
 ## 📦 Установка и запуск
 
@@ -41,8 +39,8 @@
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/VanikDev/dogfood.git
+cd dogfood
 
 # Установка зависимостей
 yarn install
@@ -64,10 +62,10 @@ yarn cypress:open
 
 ```bash
 # Сборка образа
-docker build -t your-app-name .
+docker build -t dogfood .
 
 # Запуск контейнера
-docker run -p 8080:80 your-app-name
+docker run -p 8080:80 dogfood
 
 # Или через docker-compose
 docker-compose up -d
@@ -89,24 +87,27 @@ FROM nginx:stable-alpine
 ```
 
 **Опубликованные образы:**
-- Docker Hub: `vanikego/homework-docker`
-- GitHub Registry: `github.com/VanikDev/dogfood/container_registry`
+
+-   Docker Hub: `vanikego/homework-docker`
+-   GitHub Registry: `github.com/VanikDev/dogfood/container_registry`
 
 ## 📊 Функциональность
 
 ### Основные возможности
-- ✅ Регистрация и авторизация пользователей
-- ✅ Защищенные маршруты (HOC)
-- ✅ Каталог товаров с бесконечной подгрузкой
-- ✅ Поиск товаров с debounce
-- ✅ Корзина с управлением количеством
-- ✅ Избранное
-- ✅ Детальная карточка товара с отзывами
-- ✅ Профиль пользователя
+
+-   ✅ Регистрация и авторизация пользователей
+-   ✅ Защищенные маршруты (HOC)
+-   ✅ Каталог товаров с бесконечной подгрузкой
+-   ✅ Поиск товаров с debounce
+-   ✅ Корзина с управлением количеством
+-   ✅ Избранное
+-   ✅ Детальная карточка товара с отзывами
+-   ✅ Профиль пользователя
 
 ### Тестирование
-- **Unit тесты** - 7+ компонентов с snapshot-тестированием
-- **E2E тесты** - 6 комплексных сценариев (авторизация, посты, лайки)
+
+-   **Unit тесты** - 7+ компонентов с snapshot-тестированием
+-   **E2E тесты** - 6 комплексных сценариев (авторизация, посты, лайки)
 
 ## 📁 Структура проекта
 
@@ -148,7 +149,6 @@ MIT
 ## 👤 Автор
 
 **Vanik Ego**
-- GitLab: [@VanikDev](https://github.com/VanikDev)
-- Docker Hub: [vanikego](https://hub.docker.com/u/vanikego)
 
-
+-   GitLab: [@VanikDev](https://github.com/VanikDev)
+-   Docker Hub: [vanikego](https://hub.docker.com/u/vanikego)
