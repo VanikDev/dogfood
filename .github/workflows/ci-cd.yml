@@ -121,6 +121,7 @@ jobs:
           wait-on: "http://localhost:8080"
           wait-on-timeout: 60
           browser: chrome
+          config-file: cypress/cypress.config.ts
         env:
           CI: true
 
