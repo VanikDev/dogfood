@@ -21,7 +21,7 @@
 		"prepare": "husky install",
 		"commit": "git add . && yarn test && cz",
 		"predeploy": "yarn build",
-    	"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.22.1",
@@ -112,5 +112,5 @@
 			"path": "./node_modules/cz-conventional-changelog"
 		}
 	},
-	"homepage": "https://github.com/VanikDev/dogfood"
+	"homepage": "https://vanikdev.github.io/dogfood"
 }
